@@ -14,3 +14,13 @@ export interface Todo {
   // Priority of the task
   priority: TodoPriority;
 }
+
+export interface TodoForm {
+  title: string,
+   priority: {
+    name: string, 
+    priority: number
+  }
+}
+
+

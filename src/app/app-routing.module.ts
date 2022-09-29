@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./todos/todos.module').then(m => m.TodosModule),
   },
+  {
+    path: 'new',
+    loadChildren: () => import('./todo-form/todo-form.module').then(m => m.TodoFormModule),
+  },
 ];
 
 @NgModule({

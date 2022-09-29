@@ -1,0 +1,24 @@
+
+<div class="form" >
+  <div class="container mt-3">
+    <div class="page-header py-3">
+      <div class="fw-bold">Create New Todo</div>
+    </div>
+    <form [formGroup] = 'newToDoForm'>
+      <label for="selectPriority">Priority</label>
+      <select class="form-select mt-3 "  id="selectPriority"  formControlName="priority">
+        <option class="priority1-{{priority.priority}}" placeholder="Enter the task" *ngFor="let priority of priorityOption" [ngValue]="priority">{{priority.name}}</option>
+      </select>
+      <label for="tasks">Task</label>
+      <textarea class="form-control"  placeholder="Enter the task" id="tasks" rows="3" formControlName="title"></textarea>
+      <div class="button-sec py-3">
+        <button type="button" (click) = "onSubmit(newToDoForm.value)" class="btn btn-primary">Add task</button>
+        <button type="button"  routerLink="/" class="btn btn-secondary">Back</button>
+        </div>
+    </form>
+  </div>
+  </div>
+
+
+
+
